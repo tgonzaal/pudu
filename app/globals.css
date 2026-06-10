@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F7F7F5;
+  color: #1A1A2E;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Transición suave al entrar a cada vista.
+   Importante: solo animamos opacidad (sin transform) para no crear un
+   containing block que rompa el position:fixed de los modales. */
+.view-enter {
+  animation: viewFade 0.35s ease both;
+}
+@keyframes viewFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
