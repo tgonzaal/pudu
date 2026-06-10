@@ -8,7 +8,7 @@ export default function BrandMark(props) {
       width={size}
       height={size}
       style={{ width: size, height: size }}
-      className={"rounded-lg bg-white p-0.5 " + (props.className || "")}
+      className={props.className || ""}
     />
   );
 }
